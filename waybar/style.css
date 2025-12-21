@@ -1,0 +1,26 @@
+* {
+font-family: "DejaVu Sans Mono";
+font-size: 12pt;
+}
+#tray { margin:0 10px 0 0; }
+
+/* базовый стиль индикатора */
+#language {
+   padding: 0 6px;
+   font-size: 12pt;
+ }
+
+/* синяя для us */
+#language.us {
+    color: #1e90ff;
+ }
+
+/* розовый для ru */
+#language.ru {
+   color: #ff69b4;
+  }
+
+#custom-brightness_ddc {
+	font-size: 12pt;
+	padding: 0 6px;
+}

@@ -1,0 +1,30 @@
+{
+"layer": "top",
+"modules-left": ["sway/workspaces", "sway/language"],
+"sway-language": {
+      "format": "{short}",
+      "tooltip":false 
+     },
+
+"modules-right": ["pulseaudio", "custom/brightness_ddc", "tray"],
+"pulseaudio": {
+   "format": "♫ {volume}%",
+   "format-muted": "muted",
+   "on-click": "pavucontrol"
+   },
+
+"custom/brightness_ddc": {
+   "exec": "~/.config/waybar/ddc-brightness.sh",
+	"return-type": "json",
+	"interval": 3,
+	"format": "☀ {text}%",
+	"on-scroll-up": "~/.config/waybar/ddc-brightness.sh up",
+	"on-scroll-down": "~/.config/waybar/ddc-brightness.sh down"
+   },
+
+
+
+"modules-center": ["clock"],
+"clock": { "format": "{:%a %Y-%m-%d %H:%M}" }
+
+}
