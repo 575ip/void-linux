@@ -1,0 +1,38 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/submap"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "custom/brightness_ddc", "tray"],
+
+"hyprland/language": {
+  "format": "⌨ {}",
+  "keyboard-name": "cx-2.4g-receiver",
+  "on-click": "hyprctl switchxkblayout \"cx-2.4g-receiver\" next"
+},
+
+  "custom/brightness_ddc": {
+  "exec": "~/.config/waybar/ddc-brightness.sh",
+  "return-type": "json",
+  "interval": 3,
+  "format": "☀ {}",
+  "on-scroll-up": "~/.config/waybar/ddc-brightness.sh up",
+  "on-scroll-down": "~/.config/waybar/ddc-brightness.sh down"
+  },
+  "hyprland/submap": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%a %Y-%m-%d %H:%M}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "♫ {volume}% {icon}",
+    "format-muted": "🔇",
+    "on-click": "pavucontrol"
+  }
+}
